@@ -1,4 +1,15 @@
-.App {
+.App-header {
+  text-align: center;
+  height: 150px;
+  padding: 20px;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+
+/* .App {
   text-align: center;
 }
 
@@ -29,4 +40,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
