@@ -10,12 +10,17 @@ class IdeaForm extends Component {
     }
   }
 
+  handleInput = (e) => {
+    this.setState({[e.target.name]: e.target.value})
+  }
+
   render() {
     return(
       <div className="tile">
         <form>
           <input type="text" className="input" name='title' placeholder='Enter a Title' value={this.state.title} onChange={this.handleInput} />
           <textarea name="body" className="input" placeholder='Describe Your Idea' value={this.state.body} onChange={this.handleInput}></textarea>
+          {/* <button className='sub'>Submit</button> */}
         </form>
       </div>
     )
