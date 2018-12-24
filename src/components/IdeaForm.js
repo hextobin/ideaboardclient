@@ -14,6 +14,8 @@ class IdeaForm extends Component {
     this.setState({[e.target.name]: e.target.value})
   }
 
+  // do this
+
   render() {
     return(
       <div className="tile">
