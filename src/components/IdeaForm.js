@@ -15,6 +15,7 @@ class IdeaForm extends Component {
   }
 
   // do this
+  // and this
 
   render() {
     return(
