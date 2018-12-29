@@ -14,11 +14,6 @@ class IdeaForm extends Component {
     this.setState({[e.target.name]: e.target.value})
   }
 
-  // do this
-  // and this
-  // push
-  // push this
-  // another push
 
   render() {
     return(
