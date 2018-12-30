@@ -14,11 +14,18 @@ class IdeaForm extends Component {
     this.setState({[e.target.name]: e.target.value})
   }
 
+  handleBlur = () => {
+    const idea = {
+      title: this.state.title,
+      body: this.state.body,
+    }
+  }
+
 
   render() {
     return(
       <div className="tile">
-        <form>
+        <form onBlur={this.handleBlur}>
           <input type="text" className="input" name='title' placeholder='Enter a Title' value={this.state.title} onChange={this.handleInput} />
           <textarea name="body" className="input" placeholder='Describe Your Idea' value={this.state.body} onChange={this.handleInput}></textarea>
           {/* <button className='sub'>Submit</button> */}
