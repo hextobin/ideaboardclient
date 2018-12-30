@@ -53,7 +53,6 @@ class IdeasContainer extends Component {
     this.setState({ideas: ideas})
   }
 
-  // this works
 
   render() {
     return (
