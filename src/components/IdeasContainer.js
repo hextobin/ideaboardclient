@@ -61,6 +61,10 @@ class IdeasContainer extends Component {
     this.setState({notification: ''})
   }
 
+  enableEditing = (id) => {
+    this.setState({editingIdeaId: id})
+  }
+
 
   render() {
     return (
@@ -76,7 +80,7 @@ class IdeasContainer extends Component {
             if (this.state.editingIdeaId === idea.id) {
               return (<IdeaForm idea={idea} key={idea.id} updateIdea={this.updateIdea} resetNotification={this.resetNotification} />)
             } else {
-              return (<Idea idea={idea} key={idea.id} />)
+              return (<Idea onClick={this.enableEditing}  idea={idea} key={idea.id} />)
             }
           })}
         </div>
