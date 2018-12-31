@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/ideaboardclient/static/js/runtime~main.e7ef5bdf.js"
   },
   {
-    "revision": "7dc4e54ca3b51f459989",
-    "url": "/ideaboardclient/static/js/main.7dc4e54c.chunk.js"
+    "revision": "f98ef36ac34404919826",
+    "url": "/ideaboardclient/static/js/main.f98ef36a.chunk.js"
   },
   {
     "revision": "c450ff4d9a1ef880faca",
     "url": "/ideaboardclient/static/js/1.c450ff4d.chunk.js"
   },
   {
-    "revision": "7dc4e54ca3b51f459989",
+    "revision": "f98ef36ac34404919826",
     "url": "/ideaboardclient/static/css/main.cb2c2c2e.chunk.css"
   },
   {
-    "revision": "54c0c2c20130abed12e9a76b22b55e2b",
+    "revision": "74847b0c6540b2e34c8a35f68db55939",
     "url": "/ideaboardclient/index.html"
   }
 ];

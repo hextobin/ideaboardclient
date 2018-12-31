@@ -1,13 +1,13 @@
 {
   "main.css": "/ideaboardclient/static/css/main.cb2c2c2e.chunk.css",
-  "main.js": "/ideaboardclient/static/js/main.7dc4e54c.chunk.js",
-  "main.js.map": "/ideaboardclient/static/js/main.7dc4e54c.chunk.js.map",
+  "main.js": "/ideaboardclient/static/js/main.f98ef36a.chunk.js",
+  "main.js.map": "/ideaboardclient/static/js/main.f98ef36a.chunk.js.map",
   "static/js/1.c450ff4d.chunk.js": "/ideaboardclient/static/js/1.c450ff4d.chunk.js",
   "static/js/1.c450ff4d.chunk.js.map": "/ideaboardclient/static/js/1.c450ff4d.chunk.js.map",
   "runtime~main.js": "/ideaboardclient/static/js/runtime~main.e7ef5bdf.js",
   "runtime~main.js.map": "/ideaboardclient/static/js/runtime~main.e7ef5bdf.js.map",
   "static/css/main.cb2c2c2e.chunk.css.map": "/ideaboardclient/static/css/main.cb2c2c2e.chunk.css.map",
   "index.html": "/ideaboardclient/index.html",
-  "precache-manifest.1329524ae4cae1b2439406edffa6bbcb.js": "/ideaboardclient/precache-manifest.1329524ae4cae1b2439406edffa6bbcb.js",
+  "precache-manifest.2e1bfdfc4382d9e740fc62285fc137ed.js": "/ideaboardclient/precache-manifest.2e1bfdfc4382d9e740fc62285fc137ed.js",
   "service-worker.js": "/ideaboardclient/service-worker.js"
 }
