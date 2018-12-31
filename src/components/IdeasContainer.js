@@ -16,7 +16,7 @@ class IdeasContainer extends Component {
   }
 
   componentDidMount() {
-    axios('http://localhost:3001/api/v1/ideas.json')
+    axios('https://quiet-taiga-10596.herokuapp.com/api/v1/ideas.json')
     .then(response => {
       console.log(response)
       this.setState({ideas: response.data})
