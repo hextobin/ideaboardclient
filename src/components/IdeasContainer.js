@@ -26,7 +26,7 @@ class IdeasContainer extends Component {
 
   addNewIdea = () => {
     axios.post(
-      'http://localhost:3001/api/v1/ideas',
+      'https://quiet-taiga-10596.herokuapp.com/api/v1/ideas',
       { idea:
         {
           title: '',
