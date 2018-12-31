@@ -2,6 +2,7 @@
   "name": "ideaboard",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://hextobin.github.io/ideaboardclient",
   "dependencies": {
     "axios": "^0.18.0",
     "immutability-helper": "^2.9.0",
