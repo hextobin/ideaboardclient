@@ -25,6 +25,7 @@ class IdeasContainer extends Component {
   }
 
   addNewIdea = () => {
+    this.resetNotification()
     axios.post(
       'https://quiet-taiga-10596.herokuapp.com/api/v1/ideas',
       { idea:
@@ -54,7 +55,12 @@ class IdeasContainer extends Component {
     this.setState({
       ideas: ideas,
       notification: 'All Changes Saved',
+      editingIdeaId: null,
     })
+  }
+
+  resetEditingIdeadId = () => {
+    this.setState({editingIdeaId: null})
   }
 
   resetNotification = () => {
@@ -90,7 +96,7 @@ class IdeasContainer extends Component {
         <div>
           {this.state.ideas.map((idea) => {
             if (this.state.editingIdeaId === idea.id) {
-              return (<IdeaForm idea={idea} key={idea.id} updateIdea={this.updateIdea} resetNotification={this.resetNotification} titleRef={input => this.title = input}/>)
+              return (<IdeaForm idea={idea} key={idea.id} updateIdea={this.updateIdea} resetNotification={this.resetNotification} titleRef={input => this.title = input} resetId={this.resetEditingIdeadId}/>)
             } else {
               return (<Idea onClick={this.enableEditing}  idea={idea} key={idea.id} onDelete={this.deleteIdea} />)
             }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Card } from 'semantic-ui-react'
+import onClickOutside from "react-onclickoutside"
 
 class IdeaForm extends Component {
   constructor(props) {
@@ -15,7 +17,7 @@ class IdeaForm extends Component {
     this.setState({[e.target.name]: e.target.value})
   }
 
-  handleBlur = () => {
+  handleSubmit = () => {
     const idea = {
       title: this.state.title,
       body: this.state.body,
@@ -34,18 +36,37 @@ class IdeaForm extends Component {
     .catch(error => console.log(error))
   }
 
+  handleClickOutside = evt => {
+    this.props.resetId()
+  };
+
 
   render() {
     return(
-      <div className="tile">
-        <form onBlur={this.handleBlur}>
-          <input type="text" className="input" name='title' placeholder='Enter a Title' value={this.state.title} onChange={this.handleInput} ref={this.props.titleRef} />
-          <textarea name="body" className="input" placeholder='Describe Your Idea' value={this.state.body} onChange={this.handleInput}></textarea>
-          {/* <button className='sub'>Submit</button> */}
-        </form>
-      </div>
+      // <div className="tile">
+      //   <form onBlur={this.handleBlur}>
+      //     <input type="text" className="input" name='title' placeholder='Enter a Title' value={this.state.title} onChange={this.handleInput} ref={this.props.titleRef} />
+      //     <textarea name="body" className="input" placeholder='Describe Your Idea' value={this.state.body} onChange={this.handleInput}></textarea>
+      //     {/* <button className='sub'>Submit</button> */}
+      //   </form>
+      // </div>
+      <Card className='card-tile'>
+        <Card.Content>
+          <form>
+            <Card.Header>
+              <input type="text" name='title' placeholder='Enter a Title' value={this.state.title} onChange={this.handleInput} ref={this.props.titleRef} />
+            </Card.Header>
+            <Card.Description>
+              <textarea name="body" placeholder='Describe Your Idea' value={this.state.body} onChange={this.handleInput}></textarea>
+            </Card.Description>
+            <button type='button' onClick={this.handleSubmit}>
+              Save
+            </button>
+          </form>
+        </Card.Content>
+      </Card>
     )
   }
 }
 
-export default IdeaForm
+export default onClickOutside(IdeaForm)
