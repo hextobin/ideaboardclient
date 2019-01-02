@@ -1,16 +1,16 @@
 {
-  "main.css": "/ideaboardclient/static/css/main.7d58824c.chunk.css",
-  "main.js": "/ideaboardclient/static/js/main.670fe487.chunk.js",
-  "main.js.map": "/ideaboardclient/static/js/main.670fe487.chunk.js.map",
+  "main.css": "/ideaboardclient/static/css/main.4e91cef5.chunk.css",
+  "main.js": "/ideaboardclient/static/js/main.1620f75b.chunk.js",
+  "main.js.map": "/ideaboardclient/static/js/main.1620f75b.chunk.js.map",
   "static/css/1.e9d2e907.chunk.css": "/ideaboardclient/static/css/1.e9d2e907.chunk.css",
   "static/js/1.a32d96b5.chunk.js": "/ideaboardclient/static/js/1.a32d96b5.chunk.js",
   "static/js/1.a32d96b5.chunk.js.map": "/ideaboardclient/static/js/1.a32d96b5.chunk.js.map",
   "runtime~main.js": "/ideaboardclient/static/js/runtime~main.e7ef5bdf.js",
   "runtime~main.js.map": "/ideaboardclient/static/js/runtime~main.e7ef5bdf.js.map",
   "static/media/semantic.min.css": "/ideaboardclient/static/media/brand-icons.a1a749e8.svg",
-  "static/css/main.7d58824c.chunk.css.map": "/ideaboardclient/static/css/main.7d58824c.chunk.css.map",
+  "static/css/main.4e91cef5.chunk.css.map": "/ideaboardclient/static/css/main.4e91cef5.chunk.css.map",
   "static/css/1.e9d2e907.chunk.css.map": "/ideaboardclient/static/css/1.e9d2e907.chunk.css.map",
   "index.html": "/ideaboardclient/index.html",
-  "precache-manifest.8d9e019b919b5f4c2ee7ba2651f652ab.js": "/ideaboardclient/precache-manifest.8d9e019b919b5f4c2ee7ba2651f652ab.js",
+  "precache-manifest.3d7d57ca4b9a0452d0c35c7852b42d8b.js": "/ideaboardclient/precache-manifest.3d7d57ca4b9a0452d0c35c7852b42d8b.js",
   "service-worker.js": "/ideaboardclient/service-worker.js"
 }

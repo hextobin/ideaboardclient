@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/ideaboardclient/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "670fe487c1791d4a3fdb",
-    "url": "/ideaboardclient/static/css/main.7d58824c.chunk.css"
+    "revision": "1620f75be546fb693da4",
+    "url": "/ideaboardclient/static/css/main.4e91cef5.chunk.css"
   },
   {
     "revision": "a1a749e89f578a49306ec2b055c073da",
@@ -44,8 +44,8 @@ self.__precacheManifest = [
     "url": "/ideaboardclient/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "670fe487c1791d4a3fdb",
-    "url": "/ideaboardclient/static/js/main.670fe487.chunk.js"
+    "revision": "1620f75be546fb693da4",
+    "url": "/ideaboardclient/static/js/main.1620f75b.chunk.js"
   },
   {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
@@ -56,12 +56,12 @@ self.__precacheManifest = [
     "url": "/ideaboardclient/static/media/brand-icons.a046592b.woff"
   },
   {
-    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
-    "url": "/ideaboardclient/static/media/icons.b87b9ba5.ttf"
-  },
-  {
     "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
     "url": "/ideaboardclient/static/media/icons.8e3c7f55.eot"
+  },
+  {
+    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
+    "url": "/ideaboardclient/static/media/icons.b87b9ba5.ttf"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/ideaboardclient/static/css/1.e9d2e907.chunk.css"
   },
   {
-    "revision": "5e4f82794c5d18acb67cd5a00bb95e91",
+    "revision": "6dd57a5a5a8a7b0fb0a53103b6332b34",
     "url": "/ideaboardclient/index.html"
   }
 ];
