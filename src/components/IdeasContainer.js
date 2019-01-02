@@ -18,7 +18,7 @@ class IdeasContainer extends Component {
   componentDidMount() {
     axios('https://quiet-taiga-10596.herokuapp.com/api/v1/ideas.json')
     .then(response => {
-      console.log(response)
+      // console.log(response)
       this.setState({ideas: response.data})
     })
     .catch(error => console.log(error))
@@ -52,6 +52,7 @@ class IdeasContainer extends Component {
     const ideas = update(this.state.ideas, {
       [ideaIndex]: { $set: idea }
     })
+    console.log(idea)
     this.setState({
       ideas: ideas,
       notification: 'All Changes Saved',
