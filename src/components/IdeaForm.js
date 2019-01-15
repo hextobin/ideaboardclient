@@ -53,7 +53,7 @@ class IdeaForm extends Component {
             <Card.Description>
               <textarea className='idea-body' name="body" placeholder='Describe Your Idea' value={this.state.body} onChange={this.handleInput}></textarea>
             </Card.Description>
-            <button type='button' onClick={this.handleSubmit}>
+            <button className='saveButton' type='button' onClick={this.handleSubmit}>
               Save
             </button>
           </form>

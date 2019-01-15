@@ -14,7 +14,7 @@ class Idea extends Component {
   render () {
     return(
 
-      <Card className='card-tile'>
+      <Card className='card-tile idea-1'>
         <Card.Content>
             <div>
               <button className='card-delete' onClick={this.handleDelete}>
