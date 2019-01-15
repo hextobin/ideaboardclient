@@ -1,13 +1,18 @@
 describe('Creates and saves new card', () => {
 
-  it('Click New Idea button', () => {
+  let count = 0 
+  
+  before(() => {
     cy.visit('http://localhost:3000')
-    const count = Cypress.$('idea-1').length
-    console.log(count)
+    cy.get('.idea-1').then(($idea1) => {
+      count = $idea1.length
+    })
+  })
+
+  it('Click New Idea button', () => {
     cy.get('.newIdeaButton').click()
     cy.focused()
     .should('have.class', 'new-title')
-
   })
 
   it('Accepts input', () => {
@@ -26,7 +31,8 @@ describe('Creates and saves new card', () => {
   })
 
   it('Counts number of new cards', () => {
-
+    cy.get('.idea-1')
+      .should('have.length', (count + 1))
   })
 } )
 
