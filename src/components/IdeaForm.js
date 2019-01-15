@@ -48,10 +48,10 @@ class IdeaForm extends Component {
         <Card.Content>
           <form>
             <Card.Header>
-              <input type="text" name='title' placeholder='Enter a Title' value={this.state.title} onChange={this.handleInput} ref={this.props.titleRef} />
+              <input className='new-title'  autoFocus type="text" name='title' placeholder='Enter a Title' value={this.state.title} onChange={this.handleInput} ref={this.props.titleRef} />
             </Card.Header>
             <Card.Description>
-              <textarea name="body" placeholder='Describe Your Idea' value={this.state.body} onChange={this.handleInput}></textarea>
+              <textarea className='idea-body' name="body" placeholder='Describe Your Idea' value={this.state.body} onChange={this.handleInput}></textarea>
             </Card.Description>
             <button type='button' onClick={this.handleSubmit}>
               Save
