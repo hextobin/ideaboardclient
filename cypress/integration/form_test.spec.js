@@ -1,4 +1,4 @@
-describe('Creates and saves new card', () => {
+describe('Tests card CRUD', () => {
 
   let count = 0 
   
@@ -9,13 +9,10 @@ describe('Creates and saves new card', () => {
     })
   })
 
-  it('Click New Idea button', () => {
+  it('Creates a new card', () => {
     cy.get('.newIdeaButton').click()
     cy.focused()
     .should('have.class', 'new-title')
-  })
-
-  it('Accepts input', () => {
     const typedTitle = 'Test Idea Title (Cypress)'
     const typedBody = 'Test Idea Body Text (Cypress)'
     cy.get('.new-title')
@@ -24,17 +21,12 @@ describe('Creates and saves new card', () => {
     cy.get('.idea-body')
       .type(typedBody)
       .should('have.value', typedBody)
-  })
-
-  it('Saves card', () => {
     cy.get('.saveButton').click()
+    cy.get('.idea-1')
+    .should('have.length', (count + 1))
   })
 
-  it('Counts number of new cards', () => {
-    cy.get('.idea-1')
-      .should('have.length', (count + 1))
-  })
-} )
+})
 
   
     
