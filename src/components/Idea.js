@@ -14,10 +14,10 @@ class Idea extends Component {
   render () {
     return(
 
-      <Card className='card-tile idea-1' data-cy={this.props.id}>
+      <Card className='card-tile idea-card' >
         <Card.Content>
             <div>
-              <button className='card-delete' onClick={this.handleDelete}>
+              <button data-cy={this.props.id} className='card-delete' onClick={this.handleDelete}>
                 Delete
               </button>
             </div>
