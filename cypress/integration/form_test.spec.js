@@ -10,7 +10,12 @@ describe('Tests card CRUD', () => {
   })
 
   it('Creates a new card', () => {
+    cy.server()
+    cy.route('POST', '/api/v1/ideas').as('getCard')
     cy.get('.newIdeaButton').click()
+    cy.wait('@getCard').then(function(xhr){
+      console.log(xhr)
+    })
     cy.focused()
     .should('have.class', 'new-title')
     const typedTitle = 'Test Idea Title (Cypress)'
@@ -26,6 +31,7 @@ describe('Tests card CRUD', () => {
     .should('have.length', (count + 1))
   })
 
+  
 })
 
   

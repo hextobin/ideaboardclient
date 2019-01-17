@@ -52,7 +52,7 @@ class IdeasContainer extends Component {
     const ideas = update(this.state.ideas, {
       [ideaIndex]: { $set: idea }
     })
-    console.log(idea)
+    // console.log(idea)
     this.setState({
       ideas: ideas,
       notification: 'All Changes Saved',
@@ -99,7 +99,7 @@ class IdeasContainer extends Component {
             if (this.state.editingIdeaId === idea.id) {
               return (<IdeaForm idea={idea} key={idea.id} updateIdea={this.updateIdea} resetNotification={this.resetNotification} titleRef={input => this.title = input} resetId={this.resetEditingIdeadId}/>)
             } else {
-              return (<Idea  onClick={this.enableEditing}  idea={idea} key={idea.id} onDelete={this.deleteIdea} />)
+              return (<Idea id={idea.id}  onClick={this.enableEditing}  idea={idea} key={idea.id} onDelete={this.deleteIdea} />)
             }
           })}
         </div>

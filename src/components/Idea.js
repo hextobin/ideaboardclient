@@ -14,7 +14,7 @@ class Idea extends Component {
   render () {
     return(
 
-      <Card className='card-tile idea-1'>
+      <Card className='card-tile idea-1' data-cy={this.props.id}>
         <Card.Content>
             <div>
               <button className='card-delete' onClick={this.handleDelete}>
