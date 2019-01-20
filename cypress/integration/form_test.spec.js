@@ -10,7 +10,7 @@ describe('Tests card CRUD', () => {
     })
   })
 
-  it('Creates a new card', () => {
+  it('Creates and deletes a card', () => {
     cy.server()
     cy.route('POST', '/api/v1/ideas').as('getCard')
     cy.get('.newIdeaButton').click()
@@ -20,7 +20,6 @@ describe('Tests card CRUD', () => {
 
     cy.focused()
       .should('have.class', 'new-title')
-
     const typedTitle = 'Test Idea Title (Cypress)'
     const typedBody = 'Test Idea Body Text (Cypress)'
     cy.get('.new-title')
@@ -29,19 +28,22 @@ describe('Tests card CRUD', () => {
     cy.get('.idea-body')
       .type(typedBody)
       .should('have.value', typedBody)
-    cy.get('.saveButton').click()
-    cy.get('.idea-card')
-      .should('have.length', (count + 1))
+    cy.get('.saveButton').click().then(() => {
+      cy.get('.idea-card')
+        .should('have.length', (count + 1))
+      cy.server()
+      cy.route('DELETE', `/api/v1/ideas/${newCardId}`).as('deleteCard')
+      cy.get(`[data-cy=${newCardId}]`).click()
+      cy.wait('@deleteCard').then(() => {
+        cy.get('.idea-card')
+          .should('have.length', (count))
+      })
+    })
   })
 
-  it('Deletes a card', () => {
-    cy.server()
-    cy.route('DELETE', `/api/v1/ideas/${newCardId}`).as('deleteCard')
-    cy.get(`[data-cy=${newCardId}]`).click()
-    cy.wait('@deleteCard').then(() => {
-      cy.get('.idea-card')
-        .should('have.length', (count))
-    })
+
+  it('Updates a card', () => {
+
   })
 })
 
