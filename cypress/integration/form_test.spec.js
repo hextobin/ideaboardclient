@@ -44,17 +44,26 @@ describe('Tests card CRUD', () => {
   })
 
   it.only('Updates a card', () => {
-    // cy.get('.header').each(() => {
-    //   console.log('test')
-    // })
     let headerArray = []
     cy.get(`[data-cyheader]`).each((el) => {
-      console.log(el.data('cyheader'))
+      headerArray.push(el.data('cyheader'))
+      
+    }).then(() => {
+        let oldTitle
+        let oldBody
+        cy.get(`[data-cyheader=${Math.max(...headerArray)}]`).click()
+        cy.get('input[name="title"]').invoke('val').then((val) => {
+          oldTitle = val
+          console.log(oldTitle)
+        })
+        cy.get('textarea[name="body"]').invoke('val').then((val) => {
+          oldBody = val
+          console.log(oldBody)
+        })
 
-      // headerArray.push(parseInt(el.context.attributes["data-cy-header"]))
-      // console.log(headerArray)
 
     })
+    
   })
 
 })
