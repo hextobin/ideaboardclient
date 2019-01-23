@@ -17,11 +17,11 @@ class Idea extends Component {
       <Card className='card-tile idea-card' >
         <Card.Content>
             <div>
-              <button data-cy={this.props.id} className='card-delete' onClick={this.handleDelete}>
+              <button data-cy-delete={this.props.id} className='card-delete' onClick={this.handleDelete}>
                 Delete
               </button>
             </div>
-          <Card.Header onClick={this.handleClick}>
+          <Card.Header data-cyheader={this.props.id} onClick={this.handleClick}>
             {this.props.idea.title}
           </Card.Header>
           <Card.Description onClick={this.handleClick}>

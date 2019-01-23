@@ -2,6 +2,7 @@ describe('Tests card CRUD', () => {
 
   let count
   let newCardId
+
   
   before(() => {
     cy.visit('http://localhost:3000')
@@ -34,7 +35,7 @@ describe('Tests card CRUD', () => {
       })
       cy.server()
       cy.route('DELETE', `/api/v1/ideas/${newCardId}`).as('deleteCard')
-      cy.get(`[data-cy=${newCardId}]`).click()
+      cy.get(`[data-cy-delete=${newCardId}]`).click()
       cy.wait('@deleteCard').then(() => {
         cy.get('.idea-card')
           .should('have.length', (count))
@@ -43,8 +44,16 @@ describe('Tests card CRUD', () => {
   })
 
   it.only('Updates a card', () => {
-    cy.get('.header').each(() => {
-      console.log('test')
+    // cy.get('.header').each(() => {
+    //   console.log('test')
+    // })
+    let headerArray = []
+    cy.get(`[data-cyheader]`).each((el) => {
+      console.log(el.data('cyheader'))
+
+      // headerArray.push(parseInt(el.context.attributes["data-cy-header"]))
+      // console.log(headerArray)
+
     })
   })
 
