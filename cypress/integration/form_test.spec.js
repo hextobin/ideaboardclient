@@ -42,6 +42,12 @@ describe('Tests card CRUD', () => {
     })
   })
 
+  it.only('Updates a card', () => {
+    cy.get('.header').each(() => {
+      console.log('test')
+    })
+  })
+
 })
 
   
