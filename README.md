@@ -1,4 +1,4 @@
-# Drello
+# Drello (now with Cypress tests!)
 
 Check out the live demo [here](https://hextobin.github.io/ideaboardclient).
 

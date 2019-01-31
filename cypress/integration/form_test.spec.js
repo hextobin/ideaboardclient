@@ -43,48 +43,38 @@ describe('Tests card CRUD', () => {
     })
   })
 
-  it.only('Updates a card', () => {
+  it('Updates a card', () => {
     let headerArray = []
     cy.get(`[data-cyheader]`).each((el) => {
       headerArray.push(el.data('cyheader'))
-      
     }).then(() => {
-        let oldTitle
-        let oldBody
         let headerId = Math.max(...headerArray)
         cy.get(`[data-cyheader=${headerId}]`).click()
         cy.get('input[name="title"]').invoke('val').then((val) => {
-          oldTitle = val
           cy.get('input').clear()
           cy.get('input').type('Cypress update title')
           cy.get('.saveButton').click().then(() => {
             cy.get(`[data-cyheader=${headerId}]`).should('have.text', 'Cypress update title').then(() => {
               cy.get(`[data-cyheader=${headerId}]`).click()
               cy.get('input').clear()
-              cy.get('input').type(oldTitle)
+              cy.get('input').type(val)
               cy.get('.saveButton').click()
             })
           })
         })
         cy.get(`[data-cyheader=${headerId}]`).click()
         cy.get('textarea[name="body"]').invoke('val').then((val) => {
-          oldBody = val
           cy.get('textarea').clear()
           cy.get('textarea').type('Cypress update text')
           cy.get('.saveButton').click().then(() => {
             cy.get(`[data-cydescription=${headerId}]`).should('have.text', 'Cypress update text').then(() => {
               cy.get(`[data-cyheader=${headerId}]`).click()
               cy.get('textarea').clear()
-              cy.get('textarea').type(oldBody)
+              cy.get('textarea').type(val)
               cy.get('.saveButton').click()
             })
           })
         })
-        
-        // cy.get('textarea[name="body"]').invoke('val').then((val) => {
-        //   oldBody = val
-        //   console.log(oldBody)
-        // })
 
     })
     
