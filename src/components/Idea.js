@@ -24,7 +24,7 @@ class Idea extends Component {
           <Card.Header data-cyheader={this.props.id} onClick={this.handleClick}>
             {this.props.idea.title}
           </Card.Header>
-          <Card.Description onClick={this.handleClick}>
+          <Card.Description data-cydescription={this.props.id}  onClick={this.handleClick}>
             {this.props.idea.body}
           </Card.Description>
         </Card.Content>
